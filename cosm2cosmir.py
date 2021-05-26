@@ -33,6 +33,9 @@ parser.add_argument('-o', '--output', required=True,
 parser.add_argument('-r', '--restr', required=True,
                     action='store', dest='restr',
                     help='input cosm distance/angle restraints')
+parser.add_argument('-ro', '--restr_out', required=True,
+                    action='store', dest='restr_out',
+                    help='output cosm distance/angle restraints')
 parser.add_argument('-s', '--seq', required=True,
                     action='store', dest='seq',
                     help='scaffold sequence')

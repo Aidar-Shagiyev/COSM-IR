@@ -6,12 +6,14 @@ Scripts for the upcoming expansion for the [Coarse-grained Origami Structures Mo
   * Python 3.8+
   * numpy 1.18.2+
 ### Using the script
-For now all the arguments are hardcoded, so to transform the structure just execute cosm2cosmir.py:
+To transform the structure execute cosm2cosmir.py:
 ```
-python cosm2cosmir.py
+python cosm2cosmir.py -i example/out/example.pdb -o example/example_ir.pdb -r example/out/example.r -ro example/example_ir.r -s example/inp/example_scaffold.txt -m example/out/example.map -d 100
 ```
 
 ## File descriptions
+### Force Field
+* cosmir.ff contains modified COSM force field with new particles for modeling damaged base pairs.
 ### Scripts
 * cosm2cosmir.py: the main script; transforms COSM structure (in pdb format) into the COSM-IR structure (with simulated damage; also in pdb format).
 * damage_probabilities.py: supplementary script; calculates the necessary damage probabilities.
