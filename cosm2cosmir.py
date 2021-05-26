@@ -23,35 +23,26 @@ import itertools
 from collections import namedtuple, defaultdict
 
 
-# TODO: parser
 parser = argparse.ArgumentParser()
-# parser.add_argument('-i', '--input', required=True,
-#                     action='store', dest='pdb',
-#                     help='input cosm pdb file')
-# parser.add_argument('-o', '--output', required=True,
-#                     action='store', dest='output',
-#                     help='output pdb file')
-# parser.add_argument('-r', '--restr', required=True,
-#                     action='store', dest='restr',
-#                     help='input cosm distance/angle restraints')
-# parser.add_argument('-s', '--seq', required=True,
-#                     action='store', dest='seq',
-#                     help='scaffold sequence')
-# parser.add_argument('-m', '--map', required=True,
-#                     action='store', dest='map',
-#                     help='2d coords map file')
-# parser.add_argument('-d', '--dose',
-#                     action='store', dest='dose',
-#                     help='radiation dose (in Gy)')
+parser.add_argument('-i', '--input', required=True,
+                    action='store', dest='pdb',
+                    help='input cosm pdb file')
+parser.add_argument('-o', '--output', required=True,
+                    action='store', dest='output',
+                    help='output pdb file')
+parser.add_argument('-r', '--restr', required=True,
+                    action='store', dest='restr',
+                    help='input cosm distance/angle restraints')
+parser.add_argument('-s', '--seq', required=True,
+                    action='store', dest='seq',
+                    help='scaffold sequence')
+parser.add_argument('-m', '--map', required=True,
+                    action='store', dest='map',
+                    help='2d coords map file')
+parser.add_argument('-d', '--dose',
+                    action='store', dest='dose',
+                    help='radiation dose (in Gy)')
 args = parser.parse_args()
-
-args.pdb = "example/out/example.pdb"
-args.output = "example/example_ir.pdb"
-args.restr = "example/out/example.r"
-# args.restr_out = "example/example_ir.r"
-args.sequence = "example/inp/example_scaffold.txt"
-args.map = "example/out/example.map"
-args.dose = 100
 
 
 END_ATOMS = {
