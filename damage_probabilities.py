@@ -7,7 +7,7 @@ into the requred doublet and triplet probabilities.
 MEAN_AP_PROBABILITY = 25 / 1_000_000  # At 1 Gy; https://doi.org/10.1021/bi9927989
 
 PRIOR_DOSES = {"dsb": 1, "ssb": 1, "abasic": 1, "base": 1}  # In Gy.
-# TODO: mean probabilities and doses
+
 _SSB_DOUBLET_PROBABILITIES = {  # https://doi.org/10.1667/RR14886.1
     "-1 0": {
         "CC": 29 / 1_000_000,
